@@ -1,0 +1,26 @@
+<table>
+<th>Name</th>
+<th>Client</th>
+<th>Cost</th>
+<th>Starting Date</th>
+<th>Delivery Date</th>
+<th>Team</th>
+<th>Edit</th>
+<th>Delete</th>
+<% @projects.each do |project| %>
+<tr>
+<td><%= project.name %></td>
+<td><%= project.client %></td>
+<td><%= project.cost %></td>
+<td><%= project.started_date %></td>
+<td><%= project.delivery_date %></td>
+<td><%= link_to("Team",project_persons_path(project.id))%></td>
+<td><%= link_to("Edit",edit_project_path(project.id)) %></td>
+<td><%= link_to"Delete",project_path(project), method: :delete, confirm: "Are you sure?" %></td>
+</tr>  
+<% end %>
+</table>
+
+
+
+

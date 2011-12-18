@@ -1,0 +1,3 @@
+class Persons < ActiveRecord::Base
+belong_to :project
+end

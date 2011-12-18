@@ -1,0 +1,5 @@
+class Project < ActiveRecord::Base
+def team
+#get all persons in project and retrun
+end
+end
